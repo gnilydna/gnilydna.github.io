@@ -1,7 +1,37 @@
 img {
-    width: 200px;
+    width: 150px;
 }
 body {
     text-align: center;
     font-family: "Arial";
+    background-image: url("https://omundy.files.wordpress.com/2012/04/i-will-not-write-any-more-bad-code.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
 }
+#backgroundId {
+    border: 1000px rgb(74, 232, 135) solid;
+    background-size: auto
+}
+h1 {
+    color: rgb(255, 0, 0);
+    font-size: 70px;
+    font-style: italic;
+}
+p {
+    color: rgb(255, 0, 0);
+    font-size: 30px;
+    font-style: oblique;
+}
+h2 {
+    color: rgb(204, 153, 0);
+    margin: auto;
+    font-size: 20px;
+    text-align: center
+}
+h3 {
+    color: rgb(0, 255, 255);
+    font-size: 5px;
+}
+
