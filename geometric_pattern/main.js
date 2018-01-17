@@ -1,39 +1,42 @@
 var NUM_CIRCLE = 12;
+
 var circleDiameter;
+var circleRadius;
+
 var width = 480;
 var height = 600;
 
 function setup() {
-    createCanvas(480,600);
-    circleDiameter = width/*global NUM_CIRCLE*/;
+    createCanvas(480, 600);
+    circleDiameter = width/NUM_CIRCLE;
+    circleRadius = circle/diamter/2;
 }
 
 function draw() {
-    eclipse(0 ,height/2 ,circleDiameter ,circleDiameter);
-    eclipse(circleDiameter, height/2, circleDiameter, circleDiameter);
-    eclipse(2*circleDiameter, height/2, circleDiameter, circleDiameter);
-    eclipse(3*circleDiameter, height/2, circleDiameter, circleDiameter);
-    eclipse(4*circleDiameter, height/2, circleDiameter, circleDiameter);
-    eclipse(5*circleDiameter, height/2, circleDiameter, circleDiameter);
-    eclipse(6*circleDiameter, height/2, circleDiameter, circleDiameter);
-    eclipse(7*circleDiameter, height/2, circleDiameter, circleDiameter);
-    eclipse(8*circleDiameter, height/2, circleDiameter, circleDiameter);
-    eclipse(9*circleDiameter, height/2, circleDiameter, circleDiameter);
-    eclipse(10*circleDiameter, height/2, circleDiameter, circleDiameter);
-    eclipse(11*circleDiameter, height/2, circleDiameter, circleDiameter);
-    eclipse(12*circleDiameter, height/2, circleDiameter, circleDiameter);
+    var isShifted = false;
+    
+    var y = 0;
+    while (y <= height) {
+        
+    var x;
+    
+    if (isShifted) {
+        x = circleRadius
+    } else {
+        x = 0
+    }
+    
+    while (x <= width) {
+        eclipse(x, y, circleDiameter, circleDiameter);
+        x = x + circleDiameter;
+    }
+    y = y + circleDiameter;
+    isShifted = !isShifted;        
+    }
 }
 
 function createCanvas() {
 }
 
 function eclipse() {
-}
-
-function draw() {
-    var x = 0;
-    while (x <= width) {
-        eclipse(x, 0, circleDiameter, circleDiameter);
-        x = x + circleDiameter;
-    }
 }
