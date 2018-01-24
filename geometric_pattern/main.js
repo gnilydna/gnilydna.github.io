@@ -14,26 +14,15 @@ function setup() {
 }
 
 function draw() {
-    var isShifted = false;
+    var y = 0;
+    while (y <= 0) {
     
-    var y = height;
-    while (y >= 0) {
-        
-    var x;
-    
-    if (isShifted) {
-        x = circleRadius
-    } else {
-        x = 0
-    }
-    
+    var x = 0;
     while (x <= width) {
-        eclipse(x, y, circleDiameter, circleDiameter);
-        x = x + circleDiameter;
-    }
-    
-    y = y - circleDiameter;
-    isShifted = !isShifted;        
+        ellipse(x, y, circleDiameter, circleDiameter);
+        x = x +circleDiameter;
+        }
+        y = y + circleDiameter;
     }
 }
 
@@ -41,4 +30,5 @@ function createCanvas() {
 }
 
 function eclipse() {
+    
 }
