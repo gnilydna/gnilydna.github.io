@@ -12,15 +12,24 @@ function setup() {
 }
 
 function draw() {
-    var y = 0;
-    while (y <= 0) {
+    var isShifted = false;
     
-    var x = 0;
+    var y = 0;
+    while (y <= height) {
+    
+    var x;
+    
+    if (isShifted) {
+        x = circleRadius;
+    } else {
+        x = 0;
+    }
     while (x <= width) {
         ellipse(x, y, circleDiameter, circleDiameter);
-        x = x +circleDiameter;
+        x = x + circleDiameter;
         }
         y = y + circleRadius;
+        isShifted = !isShifted;
     }
 }
 
